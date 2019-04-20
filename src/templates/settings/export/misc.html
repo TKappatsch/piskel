@@ -4,12 +4,31 @@
       Less usual export formats. Feedback and improvements welcome.
     </div>
     <div class="export-panel-section">
-      <div style="padding-bottom: 5px">
+          <div style="padding-bottom: 5px">
         <span class="highlight">Export as C File: </span>
         <span class="export-info">
-          C file with frame rendered as array for PixeLight.
+          C file with frame rendered as array.
         </span>
       </div>
+    <div class="export-format-section">
+      		<label class="export-section-radio-label">
+        	<input class="export-section-radio" name="export-type" value="32ARGB" type="radio" checked="checked">
+        		Standard 32-Bit ARGB
+      		</label>
+    	</div>
+        <div class="export-format-section">
+      		<label class="export-section-radio-label">
+        	<input class="export-section-radio" name="export-type" value="8ARGB" type="radio">
+        		Export 8-Bit ARGB for PixelLight
+      		</label>
+    	</div>
+    	<div class="export-format-section">
+      		<label class="export-section-radio-label">
+        	<input class="export-section-radio" name="export-type" value="1BIT" type="radio">
+        		Export 1-Bit Monochrom for PixelLight
+      		</label>
+    	</div>
+
       <button type="button" class="button button-primary c-download-button">Download C file</button>
     </div>
   </div>

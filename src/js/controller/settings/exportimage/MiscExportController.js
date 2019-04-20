@@ -12,6 +12,10 @@
   ns.MiscExportController.prototype.init = function () {
     var cDownloadButton = document.querySelector('.c-download-button');
     this.addEventListener(cDownloadButton, 'click', this.onDownloadCFileClick_);
+    
+    this.StandardExportType = document.querySelector('.');
+    this.ARGB8ExportType = document.querySelector('[name=export-type][value=8ARGB]');
+    this.MonoExportType = document.querySelector('[name=export-type][value=1BIT]');
   };
  
   ns.MiscExportController.prototype.onDownloadPixelLightCFileClick_ = function (evt) {
@@ -62,11 +66,14 @@
   };
 
   ns.MiscExportController.prototype.onDownloadCFileClick_ = function (evt) {
+  
     var fileName = this.getPiskelName_() + '.c';
     var cName = this.getPiskelName_().replace(' ','_');
     var width = this.piskelController.getWidth();
     var height = this.piskelController.getHeight();
     var frameCount = this.piskelController.getFrameCount();
+    
+    
 
     // Useful defines for C routines
     /*var frameStr = '#include <stdint.h>\n\n';
